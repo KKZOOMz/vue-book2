@@ -1,0 +1,8 @@
+export const CHANGE_NAV_TITLE = 'CHANGE_NAV_TITLE'
+export const SET_RANKING = 'SET_RANKING'
+export const SET_BOOK_SHELF = 'SET_BOOK_SHELF'
+export const DEL_BOOK_SHELF = 'DEL_BOOK_SHELF'
+export const SET_CHAPTER = 'SET_CHAPTER'
+export const SET_BOOK_INFO = 'SET_BOOK_INFO'
+export const SET_CONTENT = 'SET_CONTENT'
+export const SET_INDEX = 'SET_INDEX'
