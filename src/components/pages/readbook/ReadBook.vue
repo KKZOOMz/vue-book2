@@ -24,7 +24,7 @@
             </mu-button>
             <mu-button round color="#0aa" textColor="#fff" @click="getNextChapter" v-if="beginFlag">下一章
             </mu-button>
-            <mu-button round color="#0aa" textColor="#fff" @click="getRead" v-if="!beginFlag">
+            <mu-button round color="#0aa" class="beginBtn" textColor="#fff" @click="getRead" v-if="!beginFlag">
               开始阅读
             </mu-button>
           </mu-flex>
@@ -103,7 +103,7 @@
               this.chapters = res.chapters
               this.loadingFlag = false
 //              commit(types.SET_FLAG)
-              console.log(this.chapters)
+//              console.log(this.chapters)
             }
           })
       },
@@ -146,7 +146,7 @@
             if (res.status === 200) {
               res = res.data.chapter
 //              console.log(res)
-              this.content = res.cpContent.replace(/\n/g, '<br>')
+              this.content = res.cpContent.replace(/\n/g, '<br />')
               this.title = res.title
               this.contentFlag = true
             }
@@ -207,8 +207,8 @@
             margin-right: 20px
         .bookName
           width: 100%
-          min-height: 300px
-          line-height: 300px
+          min-height: 400px
+          line-height: 400px
           text-align: center
         .contentLoading
           width: 100%
@@ -233,6 +233,8 @@
           .mu-button
             margin: 8px
             vertical-align: middle
+          .beginBtn
+            margin-top: 200px
             a.mu-button
               color: #fff
               text-decoration: none
